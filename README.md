@@ -7,7 +7,7 @@ Serialization system for Ruby with awsesome features!
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'serializer'
+gem 'simple-serialization'
 ```
 
 And then execute:
