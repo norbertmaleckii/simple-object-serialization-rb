@@ -1,16 +1,16 @@
 # frozen_string_literal: true
 
-require_relative 'lib/plain_serializer/version'
+require_relative 'lib/simple_serialization/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'plain_serializer'
-  spec.version       = PlainSerializer::VERSION
+  spec.name          = 'simple_serialization'
+  spec.version       = SimpleSerialization::VERSION
   spec.authors       = ['Norbert Małecki']
   spec.email         = ['norbert.malecki@icloud.com']
 
   spec.summary       = 'Serialization system for Ruby with awsesome features!'
   spec.description   = 'Helps you to define serializers in a very simple and flexible way.'
-  spec.homepage      = 'https://github.com/norbertmaleckii/plain-serializer-rb'
+  spec.homepage      = 'https://github.com/norbertmaleckii/simple-serialization-rb'
   spec.license       = 'MIT'
   spec.required_ruby_version = '>= 2.5.0'
 

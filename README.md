@@ -1,4 +1,4 @@
-# PlainSerializer
+# SimpleSerialization
 
 Serialization system for Ruby with awsesome features!
 
@@ -21,7 +21,7 @@ Or install it yourself as:
 ## Usage
 
 ```ruby
-class UserSerializer < PlainSerializer::Entity
+class UserSerializer < SimpleSerialization::Entity
   object_alias :user
 
   define_attribute :index, if: proc { options[:index] } do
@@ -77,7 +77,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/norbertmaleckii/plain-serializer-rb. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/norbertmaleckii/plain-serializer-rb/blob/main/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/norbertmaleckii/simple-serialization-rb. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/norbertmaleckii/simple-serialization-rb/blob/main/CODE_OF_CONDUCT.md).
 
 ## License
 
@@ -85,4 +85,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the Serializer project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/norbertmaleckii/plain-serializer-rb/blob/main/CODE_OF_CONDUCT.md).
+Everyone interacting in the Serializer project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/norbertmaleckii/simple-serialization-rb/blob/main/CODE_OF_CONDUCT.md).

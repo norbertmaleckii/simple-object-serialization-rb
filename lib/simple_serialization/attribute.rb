@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module PlainSerializer
+module SimpleSerialization
   class Attribute
     extend Dry::Initializer
 

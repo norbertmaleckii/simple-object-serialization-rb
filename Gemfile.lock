@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    plain_serializer (0.1.0)
+    simple_serialization (0.1.0)
       activesupport
       callee
       dry-initializer
@@ -114,11 +114,11 @@ GEM
 
 PLATFORMS
   x86_64-darwin-20
+  x86_64-darwin-21
   x86_64-linux
 
 DEPENDENCIES
   kaminari
-  plain_serializer!
   pry
   rake
   rspec
@@ -126,6 +126,7 @@ DEPENDENCIES
   rubocop-performance
   rubocop-rake
   rubocop-rspec
+  simple_serialization!
 
 BUNDLED WITH
    2.2.22

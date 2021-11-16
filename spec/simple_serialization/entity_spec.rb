@@ -3,7 +3,7 @@
 require 'date'
 require 'kaminari'
 
-RSpec.describe PlainSerializer::Entity do
+RSpec.describe SimpleSerialization::Entity do
   describe '.define_attribute' do
     subject(:user_serializer_class) do
       Class.new(described_class) do

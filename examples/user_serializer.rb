@@ -3,7 +3,7 @@
 require 'date'
 require 'kaminari'
 
-class UserSerializer < PlainSerializer::Entity
+class UserSerializer < SimpleSerialization::Entity
   object_alias :user
 
   define_attribute :index, if: proc { options[:index] } do
