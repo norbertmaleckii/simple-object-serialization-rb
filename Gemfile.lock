@@ -2,7 +2,6 @@ PATH
   remote: .
   specs:
     simple_serialization (0.1.0)
-      activesupport
 
 GEM
   remote: https://rubygems.org/
