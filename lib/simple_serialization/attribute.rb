@@ -2,11 +2,13 @@
 
 module SimpleSerialization
   class Attribute
-    extend Dry::Initializer
+    attr_reader :name, :options, :block
 
-    option :name
-    option :options
-    option :block
+    def initialize(name, options, block)
+      @name = name
+      @options = options
+      @block = block
+    end
 
     def skip_for?(serializer)
       options[:if] ? !serializer.instance_eval(&options[:if]) : false

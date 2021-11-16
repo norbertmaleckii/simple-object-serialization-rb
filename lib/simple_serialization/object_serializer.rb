@@ -2,11 +2,17 @@
 
 module SimpleSerialization
   class ObjectSerializer
-    include Callee
+    attr_reader :serializer_class, :object, :options
 
-    param :serializer_class
-    param :object
-    param :options
+    def initialize(serializer_class, object, options)
+      @serializer_class = serializer_class
+      @object = object
+      @options = options
+    end
+
+    def self.call(*params, **options, &block)
+      new(*params, **options).call(&block)
+    end
 
     def call
       {

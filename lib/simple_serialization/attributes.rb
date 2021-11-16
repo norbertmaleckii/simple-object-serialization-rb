@@ -2,9 +2,11 @@
 
 module SimpleSerialization
   class Attributes
-    extend Dry::Initializer
+    attr_reader :attributes
 
-    param :attributes, default: proc { [] }
+    def initialize
+      @attributes = []
+    end
 
     def push(attribute)
       attributes.push(attribute)

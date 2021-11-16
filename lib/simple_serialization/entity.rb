@@ -2,10 +2,16 @@
 
 module SimpleSerialization
   class Entity
-    include Callee
+    attr_reader :object, :options
 
-    param :object
-    param :options, default: proc { {} }
+    def initialize(object, options = {})
+      @object = object
+      @options = options
+    end
+
+    def self.call(*params, **options, &block)
+      new(*params, **options).call(&block)
+    end
 
     def self.object_alias(name)
       define_method(name) do
@@ -14,11 +20,7 @@ module SimpleSerialization
     end
 
     def self.define_attribute(name, options = {}, &block)
-      attribute = Attribute.new(
-        name: name,
-        options: options,
-        block: block
-      )
+      attribute = Attribute.new(name, options, block)
 
       attributes.push(attribute)
     end
