@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'active_support/json'
+require 'json'
 
 require_relative 'simple_serialization/version'
 require_relative 'simple_serialization/attribute'

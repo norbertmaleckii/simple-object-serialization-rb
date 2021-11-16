@@ -62,10 +62,10 @@ UserSerializer.call(user, meta: { current_time: Time.now })
 #=> {:id=>1, :email=>"user@example.com", :login=>"user", :created_at=>Wed, 01 Jan 2020 00:00:00 +0000, :updated_at=>Wed, 01 Jan 2020 00:00:00 +0000}
 
 UserSerializer.serialize(user, meta: { current_time: Time.now })
-#=> "{\"data\":{\"id\":1,\"email\":\"user@example.com\",\"login\":\"user\",\"created_at\":\"2020-01-01T00:00:00.000+00:00\",\"updated_at\":\"2020-01-01T00:00:00.000+00:00\"},\"meta\":{\"current_time\":\"2021-10-28T18:44:07.044+02:00\"}}"
+#=> "{\"data\":{\"id\":1,\"email\":\"user@example.com\",\"login\":\"user\",\"created_at\":\"2020-01-01T00:00:00+00:00\",\"updated_at\":\"2020-01-01T00:00:00+00:00\"},\"meta\":{\"current_time\":\"2021-10-28T18:44:07.044+02:00\"}}"
 
 UserSerializer.serialize_collection(users, meta: { current_time: Time.now })
-#=> "{\"data\":[{\"index\":0,\"id\":1,\"email\":\"user@example.com\",\"login\":\"user\",\"created_at\":\"2020-01-01T00:00:00.000+00:00\",\"updated_at\":\"2020-01-01T00:00:00.000+00:00\"},{\"index\":1,\"id\":1,\"email\":\"user@example.com\",\"login\":\"user\",\"created_at\":\"2020-01-01T00:00:00.000+00:00\",\"updated_at\":\"2020-01-01T00:00:00.000+00:00\"}],\"meta\":{\"current_time\":\"2021-10-28T18:44:22.140+02:00\",\"total_count\":4,\"total_pages\":2,\"per_page\":2,\"prev_page\":1,\"current_page\":2,\"next_page\":null}}"
+#=> "{\"data\":[{\"index\":0,\"id\":1,\"email\":\"user@example.com\",\"login\":\"user\",\"created_at\":\"2020-01-01T00:00:00+00:00\",\"updated_at\":\"2020-01-01T00:00:00+00:00\"},{\"index\":1,\"id\":1,\"email\":\"user@example.com\",\"login\":\"user\",\"created_at\":\"2020-01-01T00:00:00+00:00\",\"updated_at\":\"2020-01-01T00:00:00+00:00\"}],\"meta\":{\"current_time\":\"2021-10-28T18:44:22.140+02:00\",\"total_count\":4,\"total_pages\":2,\"per_page\":2,\"prev_page\":1,\"current_page\":2,\"next_page\":null}}"
 
 ```
 

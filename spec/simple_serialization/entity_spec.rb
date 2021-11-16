@@ -66,8 +66,8 @@ RSpec.describe SimpleSerialization::Entity do
               'id' => 1,
               'email' => 'user@example.com',
               'login' => 'user',
-              'created_at' => '2020-01-01T00:00:00.000+00:00',
-              'updated_at' => '2020-01-01T00:00:00.000+00:00'
+              'created_at' => '2020-01-01T00:00:00+00:00',
+              'updated_at' => '2020-01-01T00:00:00+00:00'
             },
             'meta' => {}
           }
@@ -85,16 +85,16 @@ RSpec.describe SimpleSerialization::Entity do
                 'id' => 1,
                 'email' => 'user@example.com',
                 'login' => 'user',
-                'created_at' => '2020-01-01T00:00:00.000+00:00',
-                'updated_at' => '2020-01-01T00:00:00.000+00:00'
+                'created_at' => '2020-01-01T00:00:00+00:00',
+                'updated_at' => '2020-01-01T00:00:00+00:00'
               },
               {
                 'index' => 1,
                 'id' => 1,
                 'email' => 'user@example.com',
                 'login' => 'user',
-                'created_at' => '2020-01-01T00:00:00.000+00:00',
-                'updated_at' => '2020-01-01T00:00:00.000+00:00'
+                'created_at' => '2020-01-01T00:00:00+00:00',
+                'updated_at' => '2020-01-01T00:00:00+00:00'
               }
             ],
             'meta' => {
@@ -127,7 +127,7 @@ RSpec.describe SimpleSerialization::Entity do
 
       it '.serialize' do
         expected_json = JSON.generate(
-          { 'data' => { 'id' => 1, 'email' => nil, 'created_at' => '2020-01-01T00:00:00.000+00:00' }, 'meta' => {} }
+          { 'data' => { 'id' => 1, 'email' => nil, 'created_at' => '2020-01-01T00:00:00+00:00' }, 'meta' => {} }
         )
 
         expect(user_serializer_class.serialize(user)).to eq(expected_json)
@@ -141,13 +141,13 @@ RSpec.describe SimpleSerialization::Entity do
                 'index' => 0,
                 'id' => 1,
                 'email' => nil,
-                'created_at' => '2020-01-01T00:00:00.000+00:00'
+                'created_at' => '2020-01-01T00:00:00+00:00'
               },
               {
                 'index' => 1,
                 'id' => 1,
                 'email' => nil,
-                'created_at' => '2020-01-01T00:00:00.000+00:00'
+                'created_at' => '2020-01-01T00:00:00+00:00'
               }
             ],
             'meta' => {

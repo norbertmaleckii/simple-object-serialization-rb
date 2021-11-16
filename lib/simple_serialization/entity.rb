@@ -32,13 +32,13 @@ module SimpleSerialization
     def self.serialize_collection(collection, options = {})
       hash = CollectionSerializer.call(self, collection, options)
 
-      ActiveSupport::JSON.encode(hash)
+      JSON.generate(hash)
     end
 
     def self.serialize(object, options = {})
       hash = ObjectSerializer.call(self, object, options)
 
-      ActiveSupport::JSON.encode(hash)
+      JSON.generate(hash)
     end
 
     def call
