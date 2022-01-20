@@ -14,7 +14,7 @@ Style/Documentation:
 
 Metrics/BlockLength:
   Exclude:
-    - simple_serialization.gemspec
+    - simple_object_serialization.gemspec
     - "spec/**/*.rb"
 
 RSpec/MultipleExpectations:

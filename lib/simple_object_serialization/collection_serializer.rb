@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module SimpleSerialization
+module SimpleObjectSerialization
   class CollectionSerializer
     attr_reader :serializer_class, :collection, :options
 

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module SimpleSerialization
+module SimpleObjectSerialization
   class Attributes
     attr_reader :attributes
 

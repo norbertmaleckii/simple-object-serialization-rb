@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'simple_serialization'
+require 'simple_object_serialization'
 
 RSpec.configure do |config|
   config.example_status_persistence_file_path = '.rspec_status'

@@ -2,7 +2,7 @@
 # frozen_string_literal: true
 
 require 'bundler/setup'
-require 'simple_serialization'
+require 'simple_object_serialization'
 
 require_relative '../examples/user_serializer'
 

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module SimpleSerialization
+module SimpleObjectSerialization
   class Entity
     attr_reader :object, :options
 
