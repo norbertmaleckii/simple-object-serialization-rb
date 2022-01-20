@@ -9,9 +9,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Removed
 - Removed dry and active-support dependencies
 
-### Added
-- Added Ruby 3.1.0 to specs matrix
-
 ## [0.1.0] - 2021-10-28
 
 First public release
