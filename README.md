@@ -1,6 +1,6 @@
 # SimpleObjectSerialization
 
-Serialization system for Ruby with awsesome features!
+Simple object serialization system for Ruby with awsesome features!
 
 ## Installation
 
@@ -16,9 +16,42 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install serializer
+    $ gem install simple_object_serialization
 
 ## Usage
+
+You can simply define call method which returns hash.
+
+```ruby
+class UserSerializer < SimpleObjectSerialization::Entity
+  def call
+    hash = {}
+    hash[:index] = options[:index] if options[:index]
+    hash[:id] = user.id
+    hash[:email] = user.email
+    hash[:login] = login unless email.nil?
+    hash[:created_at] = user.created_at
+    hash[:updated_at] = user.created_at unless email.nil?
+    hash
+  end
+
+  private
+
+  def email
+    user.email
+  end
+
+  def login
+    user.email.split('@').first
+  end
+
+  def user
+    object
+  end
+end
+```
+
+However, you can also use gem DSL to implement serialization.
 
 ```ruby
 class UserSerializer < SimpleObjectSerialization::Entity
@@ -51,6 +84,7 @@ class UserSerializer < SimpleObjectSerialization::Entity
 end
 ```
 
+Finally, the result will be the same for both implementations.
 
 ```ruby
 User = Struct.new(:id, :email, :created_at)
@@ -66,7 +100,6 @@ UserSerializer.serialize(user, meta: { current_time: Time.now })
 
 UserSerializer.serialize_collection(users, meta: { current_time: Time.now })
 #=> "{\"data\":[{\"index\":0,\"id\":1,\"email\":\"user@example.com\",\"login\":\"user\",\"created_at\":\"2020-01-01T00:00:00+00:00\",\"updated_at\":\"2020-01-01T00:00:00+00:00\"},{\"index\":1,\"id\":1,\"email\":\"user@example.com\",\"login\":\"user\",\"created_at\":\"2020-01-01T00:00:00+00:00\",\"updated_at\":\"2020-01-01T00:00:00+00:00\"}],\"meta\":{\"current_time\":\"2021-10-28T18:44:22.140+02:00\",\"total_count\":4,\"total_pages\":2,\"per_page\":2,\"prev_page\":1,\"current_page\":2,\"next_page\":null}}"
-
 ```
 
 ## Development
