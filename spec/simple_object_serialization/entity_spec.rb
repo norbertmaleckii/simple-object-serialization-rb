@@ -69,6 +69,8 @@ RSpec.describe SimpleObjectSerialization::Entity do
               'created_at' => '2020-01-01T00:00:00+00:00',
               'updated_at' => '2020-01-01T00:00:00+00:00'
             },
+            'errors' => {},
+            'messages' => [],
             'meta' => {}
           }
         )
@@ -97,6 +99,8 @@ RSpec.describe SimpleObjectSerialization::Entity do
                 'updated_at' => '2020-01-01T00:00:00+00:00'
               }
             ],
+            'errors' => {},
+            'messages' => [],
             'meta' => {
               'total_count' => 4,
               'total_pages' => 2,
@@ -133,6 +137,8 @@ RSpec.describe SimpleObjectSerialization::Entity do
               'email' => nil,
               'created_at' => '2020-01-01T00:00:00+00:00'
             },
+            'errors' => {},
+            'messages' => [],
             'meta' => {}
           }
         )
@@ -157,6 +163,8 @@ RSpec.describe SimpleObjectSerialization::Entity do
                 'created_at' => '2020-01-01T00:00:00+00:00'
               }
             ],
+            'errors' => {},
+            'messages' => [],
             'meta' => {
               'total_count' => 4,
               'total_pages' => 2,
@@ -238,6 +246,8 @@ RSpec.describe SimpleObjectSerialization::Entity do
               'created_at' => '2020-01-01T00:00:00+00:00',
               'updated_at' => '2020-01-01T00:00:00+00:00'
             },
+            'errors' => {},
+            'messages' => [],
             'meta' => {}
           }
         )
@@ -266,6 +276,8 @@ RSpec.describe SimpleObjectSerialization::Entity do
                 'updated_at' => '2020-01-01T00:00:00+00:00'
               }
             ],
+            'errors' => {},
+            'messages' => [],
             'meta' => {
               'total_count' => 4,
               'total_pages' => 2,
@@ -302,6 +314,8 @@ RSpec.describe SimpleObjectSerialization::Entity do
               'email' => nil,
               'created_at' => '2020-01-01T00:00:00+00:00'
             },
+            'errors' => {},
+            'messages' => [],
             'meta' => {}
           }
         )
@@ -326,6 +340,8 @@ RSpec.describe SimpleObjectSerialization::Entity do
                 'created_at' => '2020-01-01T00:00:00+00:00'
               }
             ],
+            'errors' => {},
+            'messages' => [],
             'meta' => {
               'total_count' => 4,
               'total_pages' => 2,

@@ -17,6 +17,8 @@ module SimpleObjectSerialization
     def call
       {
         data: data,
+        errors: errors,
+        messages: messages,
         meta: meta
       }
     end
@@ -25,6 +27,14 @@ module SimpleObjectSerialization
 
     def data
       serializer_class.call(object, options)
+    end
+
+    def errors
+      Hash(options[:errors])
+    end
+
+    def messages
+      Array(options[:messages])
     end
 
     def meta

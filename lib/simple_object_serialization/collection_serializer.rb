@@ -17,6 +17,8 @@ module SimpleObjectSerialization
     def call
       {
         data: data,
+        errors: errors,
+        messages: messages,
         meta: meta
       }
     end
@@ -27,6 +29,14 @@ module SimpleObjectSerialization
       collection.map.with_index do |object, index|
         serializer_class.call(object, options.merge(index: index))
       end
+    end
+
+    def errors
+      Hash(options[:errors])
+    end
+
+    def messages
+      Array(options[:messages])
     end
 
     def meta
